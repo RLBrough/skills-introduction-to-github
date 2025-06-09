@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trust Building Steps</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    #image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="screen1">
+    <img id="image" src="Keith1.png" alt="Screen 1 - Introduction">
+    <button onclick="goToScreen2()">Continue</button>
+  </div>
+
+  <div id="screen2" class="hidden">
+    <img id="image2" src="Screen2.png" alt="Screen 2 - Question">
+    <br>
+    <button onclick="trustYes()">Yes</button>
+    <button onclick="goToExit()">No</button>
+  </div>
+
+  <div id="screen3" class="hidden">
+    <p>There are various forms of trust. Do you want to move to the next screen?</p>
+    <button onclick="goToExit()">Yes</button>
+    <button onclick="goToExit()">No</button>
+  </div>
+
+  <div id="screen4" class="hidden">
+    <p>Exit</p>
+  </div>
+
+  <script>
+    function hideAllScreens() {
+      document.getElementById('screen1').classList.add('hidden');
+      document.getElementById('screen2').classList.add('hidden');
+      document.getElementById('screen3').classList.add('hidden');
+      document.getElementById('screen4').classList.add('hidden');
+    }
+
+    function goToScreen2() {
+      hideAllScreens();
+      document.getElementById('screen2').classList.remove('hidden');
+    }
+
+    function trustYes() {
+      hideAllScreens();
+      document.getElementById('screen3').classList.remove('hidden');
+    }
+
+    function goToExit() {
+      hideAllScreens();
+      document.getElementById('screen4').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
