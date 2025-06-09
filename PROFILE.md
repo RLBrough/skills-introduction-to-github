@@ -1,1 +1,1 @@
-blah blah blah
+ Welcome to my GitHub profile!
